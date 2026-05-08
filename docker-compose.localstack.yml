@@ -1,0 +1,18 @@
+services:
+  localstack:
+    # Pinned before the 2026 unified image/auth-token change so this local
+    # smoke test can run without a LocalStack license.
+    image: localstack/localstack:4.14.0
+    container_name: infra-test-localstack
+    ports:
+      - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4559:4510-4559"
+    environment:
+      AWS_DEFAULT_REGION: us-east-1
+      ACTIVATE_PRO: "0"
+      DEBUG: "0"
+      LOG_LICENSE_ISSUES: "0"
+      SERVICES: acm,cloudwatch,ec2,iam,kms,logs,route53,s3,secretsmanager,sns,ssm,sts
+    volumes:
+      - ".localstack:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

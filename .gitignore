@@ -16,6 +16,9 @@
 coverage.*
 *.coverprofile
 profile.cov
+.codex
+AGENTS.md
+
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
@@ -30,3 +33,21 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# LocalStack
+.localstack/
+
+# Demo app
+demo-app/node_modules/
