@@ -47,6 +47,13 @@ Production regions are independent failure domains. Each region has:
 
 Do not try to stretch one VPC or EKS cluster across regions.
 
+## Production Application Deployment
+
+Infrastructure promotion and application rollout are separate concerns. Use the
+Terraform workflows to manage AWS infrastructure, then use
+`scripts/prod-progressive-deploy.sh` for region-by-region Kubernetes application
+rollouts. See `infra/docs/prod-progressive-deployment.md`.
+
 ## LocalStack Testing
 
 For fast local feedback on supported AWS APIs, use:

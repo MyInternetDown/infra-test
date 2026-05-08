@@ -49,5 +49,8 @@ override.tf.json
 # LocalStack
 .localstack/
 
+# Deployment logs
+rollout-logs/
+
 # Demo app
 demo-app/node_modules/

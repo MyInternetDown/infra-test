@@ -67,6 +67,7 @@ newer is required for native S3 state locking.
 - [Reliability checklist](./infra/docs/reliability-checklist.md)
 - [Cost control checklist](./infra/docs/cost-control-checklist.md)
 - [LocalStack testing](./infra/docs/localstack-testing.md)
+- [Production progressive deployment](./infra/docs/prod-progressive-deployment.md)
 - [Risks and decisions](./infra/docs/risks-and-decisions.md)
 
 ## LocalStack Smoke Test
